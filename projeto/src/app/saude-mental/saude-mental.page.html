@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Saude Mental</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Nome</ion-label>
+      <ion-input type="text" name="nome" [(ngModel)]="model.nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Idade</ion-label>
+      <ion-input type="number" name="idade" [(ngModel)]="model.idade"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Cor</ion-label>
+      <ion-input type="text" name="racaCor" [(ngModel)]="model.racaCor"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Estado Mental</ion-label>
+      <ion-select [(ngModel)]="model.saudeMental" name="saudeMental" okText="Ok" cancelText="Cancelar">
+        <ion-select-option value=1>Pessima</ion-select-option>
+        <ion-select-option value=2>Ruim</ion-select-option>
+        <ion-select-option value=3>Normal</ion-select-option>
+        <ion-select-option value=4>Boa</ion-select-option>
+        <ion-select-option value=5>Otima</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <ion-button center ion-button block (click)="save()">Adicionar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Cor</ion-label>
+      <ion-input type="text" name="racaCor" [(ngModel)]="racaCor"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-row>
+    <ion-col size="12" class="ion-text-center">
+      <ion-button center ion-button block (click)="buscarPessoas()">Buscar Pessoas</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>ID</ion-label>
+      <ion-input type="number" name="racaCor" [(ngModel)]="id"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-row>
+    <ion-col size="12" class="ion-text-center">
+      <ion-button center ion-button block (click)="buscarPessoaId()">Buscar Pessoa</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>
